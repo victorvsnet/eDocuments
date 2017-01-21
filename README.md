@@ -12,5 +12,5 @@ Grupo de Participantes:
 4. Paul Cabrera
 5. Victor Yucra
 
-Universidad Peruana de Ciencias Aplicadas
-Desarrollo para Sistemas Distribuidos (2017)
+- Universidad Peruana de Ciencias Aplicadas
+- Desarrollo para Sistemas Distribuidos (2017)
