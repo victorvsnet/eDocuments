@@ -44,9 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\eDocuments.BusinessEntity\eDocuments.BusinessEntity.csproj">
-      <Project>{DB3FD21D-68B9-421C-9D24-71CEADC74A15}</Project>
-      <Name>eDocuments.BusinessEntity</Name>
+    <ProjectReference Include="..\eDocuments.Entities\eDocuments.Entities.csproj">
+      <Project>{09a393a2-fe96-4645-b320-44472820bfa2}</Project>
+      <Name>eDocuments.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
