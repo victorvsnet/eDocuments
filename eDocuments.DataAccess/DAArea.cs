@@ -1,21 +1,17 @@
-﻿using eDocuments.Common;
-using eDocuments.Entities;
-using Npgsql;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using Npgsql;
+using NpgsqlTypes;
+using eDocuments.Entities;
+using eDocuments.Common;
 
 namespace eDocuments.DataAccess
 {
     public class DAArea
     {
-        /// <summary>
-        /// Obtiene la lista de Areas.
-        /// </summary>
-        /// <returns>Areas</returns>
         public List<BEArea> ListarArea()
         {
             List<BEArea> oListado = new List<BEArea>();
@@ -43,7 +39,7 @@ namespace eDocuments.DataAccess
 
                             if (!Convert.IsDBNull(odr["cod_estado_registro"]))
                                 oItem.cod_estado_registro = Convert.ToInt32(odr["cod_estado_registro"]);
-
+                            
                             oListado.Add(oItem);
                         }
                         odr.Close();
