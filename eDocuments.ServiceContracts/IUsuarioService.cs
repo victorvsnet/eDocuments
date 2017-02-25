@@ -21,6 +21,7 @@ namespace eDocuments.ServiceContracts
         [OperationContract]
         int Eliminar(BEUsuario oParametro);
 
+        /*prueba*/
         [OperationContract]
         int Registrar(BEUsuario oParametro);
         
