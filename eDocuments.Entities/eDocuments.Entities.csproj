@@ -41,6 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Auditoria.cs" />
+    <Compile Include="BEArea.cs" />
+    <Compile Include="BECarpeta.cs" />
+    <Compile Include="BEDocumento.cs" />
+    <Compile Include="BEPerfil.cs" />
+    <Compile Include="BEPerfilDocumento.cs" />
+    <Compile Include="BEPerfilUsuario.cs" />
+    <Compile Include="BEPropietario.cs" />
+    <Compile Include="BERol.cs" />
+    <Compile Include="BETipoDocumento.cs" />
     <Compile Include="BEUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
