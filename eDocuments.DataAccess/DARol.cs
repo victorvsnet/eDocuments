@@ -10,18 +10,18 @@ using eDocuments.Common;
 
 namespace eDocuments.DataAccess
 {
-    public class DAArea
+    public class DARol
     {
-        public List<BEArea> ListarArea()
+        public List<BERol> ListarRol()
         {
-            List<BEArea> oListado = new List<BEArea>();
-            BEArea oItem;
+            List<BERol> oListado = new List<BERol>();
+            BERol oItem;
 
             using (NpgsqlConnection ocn = new NpgsqlConnection(Util.getConnection()))
             {
                 ocn.Open();
                 NpgsqlTransaction tran = ocn.BeginTransaction();
-                using (NpgsqlCommand ocmd = new NpgsqlCommand("public.func_listar_area", ocn))
+                using (NpgsqlCommand ocmd = new NpgsqlCommand("public.func_listar_rol", ocn))
                 {
                     ocmd.CommandType = CommandType.StoredProcedure;
 
@@ -29,13 +29,13 @@ namespace eDocuments.DataAccess
                     {
                         while (odr.Read())
                         {
-                            oItem = new BEArea();
+                            oItem = new BERol();
 
-                            if (!Convert.IsDBNull(odr["cod_area"]))
-                                oItem.cod_area = Convert.ToInt32(odr["cod_area"]);
+                            if (!Convert.IsDBNull(odr["cod_rol"]))
+                                oItem.cod_rol = Convert.ToInt32(odr["cod_rol"]);
 
-                            if (!Convert.IsDBNull(odr["gls_area"]))
-                                oItem.gls_area = odr["gls_area"].ToString();
+                            if (!Convert.IsDBNull(odr["gls_rol"]))
+                                oItem.gls_rol = odr["gls_rol"].ToString();
 
                             if (!Convert.IsDBNull(odr["cod_estado_registro"]))
                                 oItem.cod_estado_registro = Convert.ToInt32(odr["cod_estado_registro"]);

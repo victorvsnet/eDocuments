@@ -10,9 +10,19 @@ namespace eDocuments.ServiceContracts
     public interface IUsuarioService
     {
         [OperationContract]
-        string SayHello(string name);
+        BEUsuario ObtenerUsuarioLogin(string usuario);
 
         [OperationContract]
-        BEUsuario ObtenerUsuarioLogin(string usuario);
+        List<BEUsuario> ListarUsuarios(string usuario);
+
+        [OperationContract]
+        int Actualizar(BEUsuario oParametro);
+
+        [OperationContract]
+        int Eliminar(BEUsuario oParametro);
+
+        [OperationContract]
+        int Registrar(BEUsuario oParametro);
+        
     }
 }

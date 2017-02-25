@@ -10,18 +10,18 @@ using eDocuments.Common;
 
 namespace eDocuments.DataAccess
 {
-    public class DAArea
+    public class DATipoDocumento
     {
-        public List<BEArea> ListarArea()
+        public List<BETipoDocumento> ListarTipoDocumento()
         {
-            List<BEArea> oListado = new List<BEArea>();
-            BEArea oItem;
+            List<BETipoDocumento> oListado = new List<BETipoDocumento>();
+            BETipoDocumento oItem;
 
             using (NpgsqlConnection ocn = new NpgsqlConnection(Util.getConnection()))
             {
                 ocn.Open();
                 NpgsqlTransaction tran = ocn.BeginTransaction();
-                using (NpgsqlCommand ocmd = new NpgsqlCommand("public.func_listar_area", ocn))
+                using (NpgsqlCommand ocmd = new NpgsqlCommand("public.func_listar_doc_tipo_documento", ocn))
                 {
                     ocmd.CommandType = CommandType.StoredProcedure;
 
@@ -29,13 +29,13 @@ namespace eDocuments.DataAccess
                     {
                         while (odr.Read())
                         {
-                            oItem = new BEArea();
+                            oItem = new BETipoDocumento();
 
-                            if (!Convert.IsDBNull(odr["cod_area"]))
-                                oItem.cod_area = Convert.ToInt32(odr["cod_area"]);
+                            if (!Convert.IsDBNull(odr["cod_tipo_documento"]))
+                                oItem.cod_tipo_documento = Convert.ToInt32(odr["cod_tipo_documento"]);
 
-                            if (!Convert.IsDBNull(odr["gls_area"]))
-                                oItem.gls_area = odr["gls_area"].ToString();
+                            if (!Convert.IsDBNull(odr["gls_tipo_documento"]))
+                                oItem.gls_tipo_documento = odr["gls_tipo_documento"].ToString();
 
                             if (!Convert.IsDBNull(odr["cod_estado_registro"]))
                                 oItem.cod_estado_registro = Convert.ToInt32(odr["cod_estado_registro"]);

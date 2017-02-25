@@ -40,6 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLArea.cs" />
+    <Compile Include="BLCarpeta.cs" />
+    <Compile Include="BLDocumento.cs" />
+    <Compile Include="BLPerfilUsuario.cs" />
+    <Compile Include="BLPerfilDocumento.cs" />
+    <Compile Include="BLPerfil.cs" />
+    <Compile Include="BLPropietario.cs" />
+    <Compile Include="BLRol.cs" />
     <Compile Include="BLUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
