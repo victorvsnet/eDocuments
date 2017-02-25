@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAArea.cs" />
+    <Compile Include="DASeguimientoSolicitud.cs" />
+    <Compile Include="DASolicitud.cs" />
     <Compile Include="DAUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
