@@ -49,6 +49,8 @@
     <Compile Include="BEPerfilUsuario.cs" />
     <Compile Include="BEPropietario.cs" />
     <Compile Include="BERol.cs" />
+    <Compile Include="BESeguimientoSolicitud.cs" />
+    <Compile Include="BESolicitud.cs" />
     <Compile Include="BETipoDocumento.cs" />
     <Compile Include="BEUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
