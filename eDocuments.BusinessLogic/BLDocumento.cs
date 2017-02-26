@@ -19,6 +19,11 @@ namespace eDocuments.BusinessLogic
             return new DADocumento().ModificarDocumento(oParametro);
         }
 
+        public bool ModificarNombreArchivo(int codigo, string descripcionDocumento, string nombreArchivo, DateTime fechaVigencia, string usuarioModificacion)
+        {
+            return new DADocumento().ModificarNombreArchivo(codigo, descripcionDocumento, nombreArchivo, fechaVigencia, usuarioModificacion);
+        }
+
         public BEDocumento ObtenerDocumento(int cod_documento)
         {
             return new DADocumento().ObtenerDocumento(cod_documento);
@@ -34,14 +39,19 @@ namespace eDocuments.BusinessLogic
             return new DADocumento().ListarDocumento(oBusqueda);
         }
 
-        public List<BEDocumento> ListarDocumento_porCarpeta(int cod_carpeta)
+        public List<BEDocumento> ListarDocumentoPorCarpeta(int cod_carpeta)
         {
-            return new DADocumento().ListarDocumento_porCarpeta(cod_carpeta);
+            return new DADocumento().ListarDocumentoPorCarpeta(cod_carpeta);
         }
 
         public List<BEDocumento> ListarDocumentoPorCarpetaSegunUsuario(int cod_carpeta, string cod_usuario)
         {
             return new DADocumento().ListarDocumentoPorCarpetaSegunUsuario(cod_carpeta, cod_usuario);
+        }
+
+        public List<BEDocumento> ListarDocumentoPorUsuario(string cod_usuario)
+        {
+            return new DADocumento().ListarDocumentoPorUsuario(cod_usuario);
         }
 
         public string GetNombreArchivo(int cod_documento)

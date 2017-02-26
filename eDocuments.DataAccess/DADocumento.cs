@@ -313,13 +313,12 @@ namespace eDocuments.DataAccess
             return oListado;
         }
 
-
         /// <summary>
         /// Listar documento por carpeta
         /// </summary>
         /// <param name="cod_carpeta">codigo de carpeta</param>
         /// <returns></returns>
-        public List<BEDocumento> ListarDocumento_porCarpeta(int cod_carpeta)
+        public List<BEDocumento> ListarDocumentoPorCarpeta(int cod_carpeta)
         {
             List<BEDocumento> oListado = new List<BEDocumento>();
             BEDocumento oItem;

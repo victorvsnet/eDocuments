@@ -47,6 +47,8 @@
     <Compile Include="BLPerfilDocumento.cs" />
     <Compile Include="BLPerfil.cs" />
     <Compile Include="BLPropietario.cs" />
+    <Compile Include="BLSeguimientoSolicitud.cs" />
+    <Compile Include="BLSolicitud.cs" />
     <Compile Include="BLRol.cs" />
     <Compile Include="BLUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
