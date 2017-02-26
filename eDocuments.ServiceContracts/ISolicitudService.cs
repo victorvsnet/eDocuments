@@ -20,5 +20,8 @@ namespace eDocuments.ServiceContracts
 
         [OperationContract]
         int EliminarSolicitud(BESolicitud oParametro);
+
+        [OperationContract]
+        int RegistrarSeguimientoSolicitud(BESeguimientoSolicitud oParametro);
     }
 }

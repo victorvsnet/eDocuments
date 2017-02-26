@@ -7,19 +7,19 @@ using eDocuments.Entities;
 namespace eDocuments.ServiceContracts
 {
     [ServiceContract]
-    public interface IPropietarioService
+    public interface IGeneralService
     {
         [OperationContract]
-        List<BEPropietario> ListarPropietario(string propietario);
+        List<BEArea> ListarArea();
 
         [OperationContract]
-        int Registrar(BEPropietario oParametro);
+        List<BERol> ListarRol();
 
         [OperationContract]
-        int Actualizar(BEPropietario oParametro);
+        List<BETipoDocumento> ListarTipoDocumento();
 
         [OperationContract]
-        int Eliminar(BEPropietario oParametro);
+        List<BEEstado> ListarEstado();
 
     }
 }

@@ -70,7 +70,7 @@
     <Compile Include="DAArea.cs" />
     <Compile Include="DACarpeta.cs" />
     <Compile Include="DADocumento.cs" />
-    <Compile Include="DAEstados.cs" />
+    <Compile Include="DAEstado.cs" />
     <Compile Include="DASeguimientoSolicitud.cs" />
     <Compile Include="DASolicitud.cs" />
     <Compile Include="DAPerfil.cs" />

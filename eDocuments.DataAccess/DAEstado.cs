@@ -1,25 +1,25 @@
-﻿using eDocuments.Common;
-using eDocuments.Entities;
-using Npgsql;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using Npgsql;
+using NpgsqlTypes;
+using eDocuments.Entities;
+using eDocuments.Common;
 
 namespace eDocuments.DataAccess
 {
-    public class DAEstados
+    public class DAEstado
     {
         /// <summary>
         /// Lista los estados de solicitudes
         /// </summary>
         /// <returns>Lista de Estados</returns>
-        public List<BEEstados> ListarEstados()
+        public List<BEEstado> ListarEstado()
         {
-            List<BEEstados> oListado = new List<BEEstados>();
-            BEEstados oItem;
+            List<BEEstado> oListado = new List<BEEstado>();
+            BEEstado oItem;
 
             using (NpgsqlConnection ocn = new NpgsqlConnection(Util.getConnection()))
             {
@@ -33,7 +33,7 @@ namespace eDocuments.DataAccess
                     {
                         while (odr.Read())
                         {
-                            oItem = new BEEstados();
+                            oItem = new BEEstado();
 
                             if (!Convert.IsDBNull(odr["cod_estado"]))
                                 oItem.cod_estado = Convert.ToInt32(odr["cod_estado"]);

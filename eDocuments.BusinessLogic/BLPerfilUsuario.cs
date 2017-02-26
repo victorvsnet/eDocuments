@@ -23,6 +23,5 @@ namespace eDocuments.BusinessLogic
         {
             return new DAPerfilUsuario().EliminarPerfilUsuario(oParametro);
         }
-
     }
 }

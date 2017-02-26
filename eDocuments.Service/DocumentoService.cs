@@ -9,6 +9,47 @@ namespace eDocuments.Service
 {
     public class DocumentoService : IDocumentoService
     {
+        #region Carpeta
+        public int EliminarCarpeta(BECarpeta oParametro)
+        {
+            var BLCarpeta = new BLCarpeta();
+            return BLCarpeta.EliminarCarpeta(oParametro);
+        }
+
+        public List<BECarpeta> ListarCarpeta()
+        {
+            var BLCarpeta = new BLCarpeta();
+            return BLCarpeta.ListarCarpeta();
+        }
+
+        public bool ModificarCarpeta(BECarpeta oParametro)
+        {
+            var BLCarpeta = new BLCarpeta();
+            return BLCarpeta.ModificarCarpeta(oParametro);
+        }
+
+        public bool ModificarCarpetaGestion(BECarpeta oParametro)
+        {
+            var BLCarpeta = new BLCarpeta();
+            return BLCarpeta.ModificarCarpetaGestion(oParametro);
+        }
+
+        public BECarpeta ObtenerCarpeta(int cod_carpeta)
+        {
+            var BLCarpeta = new BLCarpeta();
+            return BLCarpeta.ObtenerCarpeta(cod_carpeta);
+        }
+
+        public int RegistrarCarpeta(BECarpeta oParametro)
+        {
+            var BLCarpeta = new BLCarpeta();
+            return BLCarpeta.RegistrarCarpeta(oParametro);
+        }
+
+        #endregion
+
+        #region Documento
+
         public bool EliminarDocumento(int cod_documento, string cod_usuario)
         {
             var BLDocumento = new BLDocumento();
@@ -74,5 +115,7 @@ namespace eDocuments.Service
             var BLDocumento = new BLDocumento();
             return BLDocumento.RegistrarDocumento(oParametro);
         }
+
+        #endregion
     }
 }

@@ -9,6 +9,9 @@ namespace eDocuments.BusinessLogic
 {
     public class BLSeguimientoSolicitud
     {
-
+        public int RegistrarSeguimientoSolicitud(BESeguimientoSolicitud oParametro)
+        {
+            return new DASeguimientoSolicitud().RegistrarSeguimientoSolicitud(oParametro);
+        }
     }
 }

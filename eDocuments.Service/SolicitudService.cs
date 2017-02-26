@@ -32,5 +32,11 @@ namespace eDocuments.Service
             var BLSolicitud = new BLSolicitud();
             return BLSolicitud.RegistrarSolicitud(oParametro);
         }
+
+        public int RegistrarSeguimientoSolicitud(BESeguimientoSolicitud oParametro)
+        {
+            var BLSeguimientoSolicitud = new BLSeguimientoSolicitud();
+            return BLSeguimientoSolicitud.RegistrarSeguimientoSolicitud(oParametro);
+        }
     }
 }

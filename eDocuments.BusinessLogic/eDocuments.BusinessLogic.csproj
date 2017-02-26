@@ -43,6 +43,8 @@
     <Compile Include="BLArea.cs" />
     <Compile Include="BLCarpeta.cs" />
     <Compile Include="BLDocumento.cs" />
+    <Compile Include="BLEstado.cs" />
+    <Compile Include="BLTipoDocumento.cs" />
     <Compile Include="BLPerfilUsuario.cs" />
     <Compile Include="BLPerfilDocumento.cs" />
     <Compile Include="BLPerfil.cs" />

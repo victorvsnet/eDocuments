@@ -9,9 +9,28 @@ namespace eDocuments.Service
 {
     public class PropietarioService : IPropietarioService
     {
-        public List<BEPropietario> Listar()
+        public int Actualizar(BEPropietario oParametro)
         {
-            return new List<BEPropietario>();
+            var BLPropietario = new BLPropietario();
+            return BLPropietario.Actualizar(oParametro);
+        }
+
+        public int Eliminar(BEPropietario oParametro)
+        {
+            var BLPropietario = new BLPropietario();
+            return BLPropietario.Eliminar(oParametro);
+        }
+
+        public List<BEPropietario> ListarPropietario(string propietario)
+        {
+            var BLPropietario = new BLPropietario();
+            return BLPropietario.ListarPropietario(propietario);
+        }
+
+        public int Registrar(BEPropietario oParametro)
+        {
+            var BLPropietario = new BLPropietario();
+            return BLPropietario.Registrar(oParametro);
         }
     }
 }

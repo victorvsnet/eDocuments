@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eDocuments.Entities
 {
-    public class BEEstados : Auditoria
+    public class BEEstado : Auditoria
     {
         public int cod_estado { get; set; }
         public string gls_estado { get; set; }

@@ -9,6 +9,27 @@ namespace eDocuments.ServiceContracts
     [ServiceContract]
     public interface IDocumentoService
     {
+        #region Carpetas
+        [OperationContract]
+        int RegistrarCarpeta(BECarpeta oParametro);
+
+        [OperationContract]
+        int EliminarCarpeta(BECarpeta oParametro);
+
+        [OperationContract]
+        bool ModificarCarpeta(BECarpeta oParametro);
+
+        [OperationContract]
+        bool ModificarCarpetaGestion(BECarpeta oParametro);
+
+        [OperationContract]
+        BECarpeta ObtenerCarpeta(int cod_carpeta);
+
+        #endregion
+
+        #region Documentos
+        List<BECarpeta> ListarCarpeta();
+
         [OperationContract]
         int RegistrarDocumento(BEDocumento oParametro);
 
@@ -41,6 +62,8 @@ namespace eDocuments.ServiceContracts
 
         [OperationContract]
         bool EliminarDocumento(int cod_documento, string cod_usuario);
-        
+
+        #endregion
+
     }
 }

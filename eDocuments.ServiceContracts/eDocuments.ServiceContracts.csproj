@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IDocumentoService.cs" />
-    <Compile Include="ISeguimientoSolicitudService.cs" />
+    <Compile Include="IGeneralService.cs" />
     <Compile Include="IPerfilService.cs" />
     <Compile Include="IPropietarioService.cs" />
     <Compile Include="ISolicitudService.cs" />

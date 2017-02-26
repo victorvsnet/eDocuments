@@ -15,14 +15,17 @@ namespace WebDocuments.Controllers
         // GET: Test
         public ActionResult Index()
         {
-            TestModel model = new TestModel();
+            return View();
+        }
 
-            using(ServiceUsuario.UsuarioServiceClient svc = new UsuarioServiceClient())
+        public ActionResult Index2()
+        {
+            using (ServiceGeneral.GeneralServiceClient svc = new ServiceGeneral.GeneralServiceClient())
             {
-                model.Message = svc.SayHello("Paul");
+                var lista = svc.ListarEstado();
             }
 
-            return View(model);
+            return View();
         }
     }
 }

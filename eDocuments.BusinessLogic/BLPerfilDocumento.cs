@@ -18,8 +18,5 @@ namespace eDocuments.BusinessLogic
         {
             return new DAPerfilDocumento().EliminarPerfilDocumento(oParametro);
         }
-
-       
-
     }
 }
