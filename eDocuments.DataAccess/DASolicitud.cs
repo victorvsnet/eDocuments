@@ -156,5 +156,37 @@ namespace eDocuments.DataAccess
             return iResultado;
         }
 
+        public int ContinuarFlujo(BESolicitud solicitud)
+        {
+            int iResultado;
+
+            try
+            {
+                using (NpgsqlConnection ocn = new NpgsqlConnection(Util.getConnection()))
+                {
+                    ocn.Open();
+                    NpgsqlTransaction tran = ocn.BeginTransaction();
+                    using (NpgsqlCommand ocmd = new NpgsqlCommand("public.func_flujo_doc_solicitud", ocn))
+                    {
+                        ocmd.CommandType = CommandType.StoredProcedure;
+                        ocmd.Parameters.Add("@p_cod_solicitud", NpgsqlDbType.Integer).Value = solicitud.cod_solicitud;
+                        ocmd.Parameters.Add("@p_cod_estado", NpgsqlDbType.Integer).Value = solicitud.cod_estado;
+                        ocmd.Parameters.Add("@p_aud_usr_modificacion", NpgsqlDbType.Varchar).Value = solicitud.aud_usr_modificacion;
+
+                        iResultado = ocmd.ExecuteNonQuery();
+                    }
+                    tran.Commit();
+                    ocn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return iResultado;
+        }
+
+
     }
 }
