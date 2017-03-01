@@ -20,12 +20,21 @@ namespace WebDocuments.Controllers
 
         public ActionResult Index2()
         {
+            List<EstadoModel> model = new List<EstadoModel>();
             using (ServiceGeneral.GeneralServiceClient svc = new ServiceGeneral.GeneralServiceClient())
             {
-                var lista = svc.ListarEstado();
+                var lstEstado = svc.ListarEstado();
+                foreach(var item in lstEstado)
+                {
+                    model.Add(new EstadoModel()
+                    {
+                        cod_estado = item.cod_estado,
+                        gls_estado = item.gls_estado
+                    });
+                }
             }
 
-            return View();
+            return View(model);
         }
     }
 }

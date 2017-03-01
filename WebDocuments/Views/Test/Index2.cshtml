@@ -1,7 +1,17 @@
 ﻿
+@model IList<WebDocuments.Models.EstadoModel>
+
 @{
     ViewBag.Title = "Index2";
 }
 
 <h2>Index2</h2>
 
+<div>
+    <select>
+        @foreach (var item in Model)
+        {
+            <option value="@item.cod_estado">@item.gls_estado</option>
+        }
+    </select>
+</div>

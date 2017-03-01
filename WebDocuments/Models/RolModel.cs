@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WebDocuments.Models
 {
-    public class RolModel
+    public class RolModel : Auditoria
     {
         public int cod_rol { get; set; }
         public string gls_rol { get; set; }
