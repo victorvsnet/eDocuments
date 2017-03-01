@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using System.IO;
 
 namespace WebDocuments.Controllers
 {
@@ -21,7 +21,7 @@ namespace WebDocuments.Controllers
         {
             return View();
         }
-        [HttpPost]
+
         public ActionResult UploadFile(HttpPostedFileBase file)
         {
             try
@@ -35,7 +35,7 @@ namespace WebDocuments.Controllers
                 ViewBag.Message = "Documento cargado correctamente!";
                 return View();
             }
-            catch
+            catch(Exception ex)
             {
                 ViewBag.Message = "Falló carga de documento!";
                 return View();
