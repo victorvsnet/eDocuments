@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "RegistroDocumento";
+}
+
+<h2>RegistroDocumento</h2>
+
+@if (Session["Username"] != null)
+{
+    <text>
+        Bienvenido @Session["Username"].ToString()
+    </text>
+}
+
+@using (Html.BeginForm("UploadFile", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <div>
+        @Html.TextBox("file", "", new { type = "file" }) <br />
+
+        <input type="submit" value="Upload" />
+
+        @ViewBag.Message
+
+    </div>
+
+
