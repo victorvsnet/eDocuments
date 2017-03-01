@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/eDocuments.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/eDocuments.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="BECarpeta">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Auditoria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cod_carpeta" type="xs:int" />
+          <xs:element minOccurs="0" name="cod_carpeta_padre" type="xs:int" />
+          <xs:element minOccurs="0" name="gls_ruta_carpeta" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BECarpeta" nillable="true" type="tns:BECarpeta" />
+  <xs:complexType name="Auditoria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aud_fec_ingreso" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="aud_fec_modificacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="aud_usr_ingreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="aud_usr_modificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cod_estado_registro" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Auditoria" nillable="true" type="tns:Auditoria" />
+  <xs:complexType name="BEDocumento">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Auditoria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cod_carpeta" type="xs:int" />
+          <xs:element minOccurs="0" name="cod_documento" type="xs:int" />
+          <xs:element minOccurs="0" name="cod_perfil" type="xs:int" />
+          <xs:element minOccurs="0" name="cod_propietario" type="xs:int" />
+          <xs:element minOccurs="0" name="cod_tipo_documento" type="xs:int" />
+          <xs:element minOccurs="0" name="cod_usuario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fec_vigencia" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="gls_nombre_archivo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="gls_nombre_documento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="gls_perfil" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="gls_propietario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="gls_ruta_carpeta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="gls_tipo_documento" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BEDocumento" nillable="true" type="tns:BEDocumento" />
+  <xs:complexType name="ArrayOfBEDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BEDocumento" nillable="true" type="tns:BEDocumento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBEDocumento" nillable="true" type="tns:ArrayOfBEDocumento" />
+</xs:schema>

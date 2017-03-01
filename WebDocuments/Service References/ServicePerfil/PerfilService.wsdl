@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PerfilService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2017/PerfilService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2017/PerfilService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2017/PerfilService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/eDocuments.Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPerfilService_ListarPerfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPerfil" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_ListarPerfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPerfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_Actualizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_Actualizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_GetPerfilesSinAsignar_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerfilesSinAsignar" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_GetPerfilesSinAsignar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerfilesSinAsignarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_GetPerfilesAsignados_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerfilesAsignados" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_GetPerfilesAsignados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerfilesAsignadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_GetPerfilesSinAsignarDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerfilesSinAsignarDoc" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_GetPerfilesSinAsignarDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerfilesSinAsignarDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_GetPerfilesAsignadosDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerfilesAsignadosDoc" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_GetPerfilesAsignadosDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerfilesAsignadosDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_RegistrarPerfilDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarPerfilDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_RegistrarPerfilDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarPerfilDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_EliminarPerfilDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPerfilDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_EliminarPerfilDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPerfilDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_ListarPerfilUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPerfilUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_ListarPerfilUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarPerfilUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_RegistrarPerfilUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarPerfilUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_RegistrarPerfilUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarPerfilUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_EliminarPerfilUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPerfilUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilService_EliminarPerfilUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPerfilUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPerfilService">
+    <wsdl:operation name="ListarPerfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilService/ListarPerfil" message="tns:IPerfilService_ListarPerfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilService/ListarPerfilResponse" message="tns:IPerfilService_ListarPerfil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilService/Registrar" message="tns:IPerfilService_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilService/RegistrarResponse" message="tns:IPerfilService_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilService/Actualizar" message="tns:IPerfilService_Actualizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilService/ActualizarResponse" message="tns:IPerfilService_Actualizar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilService/Eliminar" message="tns:IPerfilService_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilService/EliminarResponse" message="tns:IPerfilService_Eliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerfilesSinAsignar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilService/GetPerfilesSinAsignar" message="tns:IPerfilService_GetPerfilesSinAsignar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilService/GetPerfilesSinAsignarResponse" message="tns:IPerfilService_GetPerfilesSinAsignar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerfilesAsignados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilService/GetPerfilesAsignados" message="tns:IPerfilService_GetPerfilesAsignados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilService/GetPerfilesAsignadosResponse" message="tns:IPerfilService_GetPerfilesAsignados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerfilesSinAsignarDoc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilService/GetPerfilesSinAsignarDoc" message="tns:IPerfilService_GetPerfilesSinAsignarDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilService/GetPerfilesSinAsignarDocResponse" message="tns:IPerfilService_GetPerfilesSinAsignarDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerfilesAsignadosDoc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilService/GetPerfilesAsignadosDoc" message="tns:IPerfilService_GetPerfilesAsignadosDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilService/GetPerfilesAsignadosDocResponse" message="tns:IPerfilService_GetPerfilesAsignadosDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPerfilDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilService/RegistrarPerfilDocumento" message="tns:IPerfilService_RegistrarPerfilDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilService/RegistrarPerfilDocumentoResponse" message="tns:IPerfilService_RegistrarPerfilDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPerfilDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilService/EliminarPerfilDocumento" message="tns:IPerfilService_EliminarPerfilDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilService/EliminarPerfilDocumentoResponse" message="tns:IPerfilService_EliminarPerfilDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarPerfilUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilService/ListarPerfilUsuario" message="tns:IPerfilService_ListarPerfilUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilService/ListarPerfilUsuarioResponse" message="tns:IPerfilService_ListarPerfilUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPerfilUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilService/RegistrarPerfilUsuario" message="tns:IPerfilService_RegistrarPerfilUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilService/RegistrarPerfilUsuarioResponse" message="tns:IPerfilService_RegistrarPerfilUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPerfilUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilService/EliminarPerfilUsuario" message="tns:IPerfilService_EliminarPerfilUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilService/EliminarPerfilUsuarioResponse" message="tns:IPerfilService_EliminarPerfilUsuario_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPerfilService" type="tns:IPerfilService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListarPerfil">
+      <soap:operation soapAction="http://tempuri.org/IPerfilService/ListarPerfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar">
+      <soap:operation soapAction="http://tempuri.org/IPerfilService/Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <soap:operation soapAction="http://tempuri.org/IPerfilService/Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <soap:operation soapAction="http://tempuri.org/IPerfilService/Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerfilesSinAsignar">
+      <soap:operation soapAction="http://tempuri.org/IPerfilService/GetPerfilesSinAsignar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerfilesAsignados">
+      <soap:operation soapAction="http://tempuri.org/IPerfilService/GetPerfilesAsignados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerfilesSinAsignarDoc">
+      <soap:operation soapAction="http://tempuri.org/IPerfilService/GetPerfilesSinAsignarDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerfilesAsignadosDoc">
+      <soap:operation soapAction="http://tempuri.org/IPerfilService/GetPerfilesAsignadosDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPerfilDocumento">
+      <soap:operation soapAction="http://tempuri.org/IPerfilService/RegistrarPerfilDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPerfilDocumento">
+      <soap:operation soapAction="http://tempuri.org/IPerfilService/EliminarPerfilDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarPerfilUsuario">
+      <soap:operation soapAction="http://tempuri.org/IPerfilService/ListarPerfilUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPerfilUsuario">
+      <soap:operation soapAction="http://tempuri.org/IPerfilService/RegistrarPerfilUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPerfilUsuario">
+      <soap:operation soapAction="http://tempuri.org/IPerfilService/EliminarPerfilUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PerfilService">
+    <wsdl:port name="BasicHttpBinding_IPerfilService" binding="tns:BasicHttpBinding_IPerfilService">
+      <soap:address location="http://localhost:2017/PerfilService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

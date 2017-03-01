@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DocumentoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2017/DocumentoService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2017/DocumentoService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2017/DocumentoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/eDocuments.Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDocumentoService_RegistrarCarpeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarCarpeta" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_RegistrarCarpeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarCarpetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_EliminarCarpeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCarpeta" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_EliminarCarpeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCarpetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ModificarCarpeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarCarpeta" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ModificarCarpeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarCarpetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ModificarCarpetaGestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarCarpetaGestion" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ModificarCarpetaGestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarCarpetaGestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ObtenerCarpeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCarpeta" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ObtenerCarpeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCarpetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_RegistrarDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_RegistrarDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ModificarDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ModificarDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ModificarNombreArchivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarNombreArchivo" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ModificarNombreArchivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarNombreArchivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ObtenerDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ObtenerDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ObtenerDocumentoDownload_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDocumentoDownload" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ObtenerDocumentoDownload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDocumentoDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ListarDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ListarDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ListarDocumentoPorCarpeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocumentoPorCarpeta" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ListarDocumentoPorCarpeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocumentoPorCarpetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ListarDocumentoPorCarpetaSegunUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocumentoPorCarpetaSegunUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ListarDocumentoPorCarpetaSegunUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocumentoPorCarpetaSegunUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ListarDocumentoPorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocumentoPorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_ListarDocumentoPorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocumentoPorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_GetNombreArchivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNombreArchivo" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_GetNombreArchivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNombreArchivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_EliminarDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoService_EliminarDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDocumentoService">
+    <wsdl:operation name="RegistrarCarpeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/RegistrarCarpeta" message="tns:IDocumentoService_RegistrarCarpeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/RegistrarCarpetaResponse" message="tns:IDocumentoService_RegistrarCarpeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCarpeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/EliminarCarpeta" message="tns:IDocumentoService_EliminarCarpeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/EliminarCarpetaResponse" message="tns:IDocumentoService_EliminarCarpeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCarpeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/ModificarCarpeta" message="tns:IDocumentoService_ModificarCarpeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/ModificarCarpetaResponse" message="tns:IDocumentoService_ModificarCarpeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCarpetaGestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/ModificarCarpetaGestion" message="tns:IDocumentoService_ModificarCarpetaGestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/ModificarCarpetaGestionResponse" message="tns:IDocumentoService_ModificarCarpetaGestion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCarpeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/ObtenerCarpeta" message="tns:IDocumentoService_ObtenerCarpeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/ObtenerCarpetaResponse" message="tns:IDocumentoService_ObtenerCarpeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/RegistrarDocumento" message="tns:IDocumentoService_RegistrarDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/RegistrarDocumentoResponse" message="tns:IDocumentoService_RegistrarDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/ModificarDocumento" message="tns:IDocumentoService_ModificarDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/ModificarDocumentoResponse" message="tns:IDocumentoService_ModificarDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarNombreArchivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/ModificarNombreArchivo" message="tns:IDocumentoService_ModificarNombreArchivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/ModificarNombreArchivoResponse" message="tns:IDocumentoService_ModificarNombreArchivo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/ObtenerDocumento" message="tns:IDocumentoService_ObtenerDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/ObtenerDocumentoResponse" message="tns:IDocumentoService_ObtenerDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocumentoDownload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/ObtenerDocumentoDownload" message="tns:IDocumentoService_ObtenerDocumentoDownload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/ObtenerDocumentoDownloadResponse" message="tns:IDocumentoService_ObtenerDocumentoDownload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/ListarDocumento" message="tns:IDocumentoService_ListarDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/ListarDocumentoResponse" message="tns:IDocumentoService_ListarDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumentoPorCarpeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/ListarDocumentoPorCarpeta" message="tns:IDocumentoService_ListarDocumentoPorCarpeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/ListarDocumentoPorCarpetaResponse" message="tns:IDocumentoService_ListarDocumentoPorCarpeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumentoPorCarpetaSegunUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/ListarDocumentoPorCarpetaSegunUsuario" message="tns:IDocumentoService_ListarDocumentoPorCarpetaSegunUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/ListarDocumentoPorCarpetaSegunUsuarioResponse" message="tns:IDocumentoService_ListarDocumentoPorCarpetaSegunUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumentoPorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/ListarDocumentoPorUsuario" message="tns:IDocumentoService_ListarDocumentoPorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/ListarDocumentoPorUsuarioResponse" message="tns:IDocumentoService_ListarDocumentoPorUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNombreArchivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/GetNombreArchivo" message="tns:IDocumentoService_GetNombreArchivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/GetNombreArchivoResponse" message="tns:IDocumentoService_GetNombreArchivo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoService/EliminarDocumento" message="tns:IDocumentoService_EliminarDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoService/EliminarDocumentoResponse" message="tns:IDocumentoService_EliminarDocumento_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDocumentoService" type="tns:IDocumentoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarCarpeta">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/RegistrarCarpeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCarpeta">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/EliminarCarpeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCarpeta">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/ModificarCarpeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCarpetaGestion">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/ModificarCarpetaGestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCarpeta">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/ObtenerCarpeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDocumento">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/RegistrarDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarDocumento">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/ModificarDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarNombreArchivo">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/ModificarNombreArchivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocumento">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/ObtenerDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocumentoDownload">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/ObtenerDocumentoDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumento">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/ListarDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumentoPorCarpeta">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/ListarDocumentoPorCarpeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumentoPorCarpetaSegunUsuario">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/ListarDocumentoPorCarpetaSegunUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumentoPorUsuario">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/ListarDocumentoPorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNombreArchivo">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/GetNombreArchivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDocumento">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoService/EliminarDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocumentoService">
+    <wsdl:port name="BasicHttpBinding_IDocumentoService" binding="tns:BasicHttpBinding_IDocumentoService">
+      <soap:address location="http://localhost:2017/DocumentoService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="da121195-7f07-484f-a20d-33827c5e46ca" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2017/PropietarioService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PropietarioService.disco" MetadataType="Disco" ID="c7a6e116-da3e-4b47-b914-afda8cb49521" SourceId="1" SourceUrl="http://localhost:2017/PropietarioService.svc?disco" />
+    <MetadataFile FileName="PropietarioService.wsdl" MetadataType="Wsdl" ID="25eee8cf-53b8-4f6b-93c1-770fcc34f2b2" SourceId="1" SourceUrl="http://localhost:2017/PropietarioService.svc?wsdl" />
+    <MetadataFile FileName="PropietarioService.xsd" MetadataType="Schema" ID="7b5f8e10-171b-4e7f-b5f4-788b73d432c0" SourceId="1" SourceUrl="http://localhost:2017/PropietarioService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PropietarioService1.xsd" MetadataType="Schema" ID="5b78a6ab-0cf8-4e99-9b02-07b2e21a1087" SourceId="1" SourceUrl="http://localhost:2017/PropietarioService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PropietarioService2.xsd" MetadataType="Schema" ID="55bdb51c-dc26-4fd3-ae1d-39abb22d3911" SourceId="1" SourceUrl="http://localhost:2017/PropietarioService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

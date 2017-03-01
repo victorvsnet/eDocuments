@@ -5,10 +5,9 @@ using System.Web;
 
 namespace WebDocuments.Models
 {
-    public class EstadoModel
+    public class EstadoModel : Auditoria
     {
         public int cod_estado { get; set;}
-
         public string gls_estado { get; set; }
     }
 }

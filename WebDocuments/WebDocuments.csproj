@@ -198,19 +198,54 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DocumentoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PerfilController.cs" />
+    <Compile Include="Controllers\SolicitudController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AreaModel.cs" />
+    <Compile Include="Models\Auditoria.cs" />
+    <Compile Include="Models\CarpetaModel.cs" />
+    <Compile Include="Models\DocumentoModel.cs" />
     <Compile Include="Models\EstadoModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\TestModel.cs" />
+    <Compile Include="Models\PerfilDocumentoModel.cs" />
+    <Compile Include="Models\PerfilModel.cs" />
+    <Compile Include="Models\PerfilUsuarioModel.cs" />
+    <Compile Include="Models\PropietarioModel.cs" />
+    <Compile Include="Models\RolModel.cs" />
+    <Compile Include="Models\SeguimientoSolicitudModel.cs" />
+    <Compile Include="Models\SolicitudModel.cs" />
+    <Compile Include="Models\TipoDocumentoModel.cs" />
+    <Compile Include="Models\UsuarioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServiceDocumento\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceGeneral\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicePerfil\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicePropietario\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceSolicitud\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -245,6 +280,22 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <None Include="Service References\ServiceDocumento\DocumentoService.wsdl" />
+    <None Include="Service References\ServiceDocumento\DocumentoService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumento\DocumentoService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumento\DocumentoService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceDocumento\WebDocuments.ServiceDocumento.BECarpeta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDocumento\WebDocuments.ServiceDocumento.BEDocumento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\ServiceGeneral\GeneralService.wsdl" />
     <None Include="Service References\ServiceGeneral\GeneralService.xsd">
       <SubType>Designer</SubType>
@@ -254,6 +305,13 @@
     </None>
     <None Include="Service References\ServiceGeneral\GeneralService2.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDocumento\DocumentoService.disco" />
+    <None Include="Service References\ServiceDocumento\configuration91.svcinfo" />
+    <None Include="Service References\ServiceDocumento\configuration.svcinfo" />
+    <None Include="Service References\ServiceDocumento\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Service References\ServiceGeneral\WebDocuments.ServiceGeneral.BEArea.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -267,6 +325,48 @@
     <Content Include="Service References\ServiceGeneral\WebDocuments.ServiceGeneral.BETipoDocumento.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\ServicePerfil\PerfilService.wsdl" />
+    <None Include="Service References\ServicePerfil\PerfilService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePerfil\PerfilService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePerfil\PerfilService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServicePerfil\WebDocuments.ServicePerfil.BEPerfil.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePerfil\WebDocuments.ServicePerfil.BEPerfilUsuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServicePropietario\PropietarioService.wsdl" />
+    <None Include="Service References\ServicePropietario\PropietarioService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePropietario\PropietarioService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePropietario\PropietarioService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServicePropietario\WebDocuments.ServicePropietario.BEPropietario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceSolicitud\SolicitudService.wsdl" />
+    <None Include="Service References\ServiceSolicitud\SolicitudService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceSolicitud\SolicitudService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceSolicitud\SolicitudService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceSolicitud\WebDocuments.ServiceSolicitud.BESolicitud.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\ServiceUsuario\UsuarioService.disco" />
     <None Include="Service References\ServiceUsuario\configuration91.svcinfo" />
     <None Include="Service References\ServiceUsuario\configuration.svcinfo" />
@@ -278,6 +378,27 @@
     <None Include="Service References\ServiceGeneral\configuration91.svcinfo" />
     <None Include="Service References\ServiceGeneral\configuration.svcinfo" />
     <None Include="Service References\ServiceGeneral\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServicePerfil\PerfilService.disco" />
+    <None Include="Service References\ServicePerfil\configuration91.svcinfo" />
+    <None Include="Service References\ServicePerfil\configuration.svcinfo" />
+    <None Include="Service References\ServicePerfil\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServicePropietario\PropietarioService.disco" />
+    <None Include="Service References\ServicePropietario\configuration91.svcinfo" />
+    <None Include="Service References\ServicePropietario\configuration.svcinfo" />
+    <None Include="Service References\ServicePropietario\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceSolicitud\SolicitudService.disco" />
+    <None Include="Service References\ServiceSolicitud\configuration91.svcinfo" />
+    <None Include="Service References\ServiceSolicitud\configuration.svcinfo" />
+    <None Include="Service References\ServiceSolicitud\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -330,9 +451,12 @@
     </Content>
     <Content Include="Views\Test\Index.cshtml" />
     <Content Include="Views\Test\Index2.cshtml" />
+    <Content Include="Views\Solicitud\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Documento\" />
+    <Folder Include="Views\Perfil\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -347,7 +471,11 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceDocumento\" />
     <WCFMetadataStorage Include="Service References\ServiceGeneral\" />
+    <WCFMetadataStorage Include="Service References\ServicePerfil\" />
+    <WCFMetadataStorage Include="Service References\ServicePropietario\" />
+    <WCFMetadataStorage Include="Service References\ServiceSolicitud\" />
     <WCFMetadataStorage Include="Service References\ServiceUsuario\" />
   </ItemGroup>
   <PropertyGroup>

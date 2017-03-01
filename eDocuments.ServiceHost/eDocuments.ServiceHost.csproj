@@ -91,6 +91,7 @@
   <ItemGroup>
     <Content Include="DocumentoService.svc" />
     <Content Include="GeneralService.svc" />
+    <Content Include="SolicitudService.svc" />
     <Content Include="PerfilService.svc" />
     <Content Include="PropietarioService.svc" />
     <Content Include="UsuarioService.svc" />
