@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-using WebDocuments.Models;
 
 namespace WebDocuments.Controllers
 {
@@ -13,20 +13,33 @@ namespace WebDocuments.Controllers
         // GET: Solicitud
         public ActionResult Index()
         {
-            List<EstadoModel> model = new List<EstadoModel>();
-            using (ServiceGeneral.GeneralServiceClient svc = new ServiceGeneral.GeneralServiceClient())
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult UploadFile()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult UploadFile(HttpPostedFileBase file)
+        {
+            try
             {
-                var lstEstados = svc.ListarEstado();
-                foreach(var item in lstEstados)
+                if (file.ContentLength > 0)
                 {
-                    model.Add(new EstadoModel()
-                    {
-                        cod_estado = item.cod_estado,
-                        gls_estado = item.gls_estado
-                    });
+                    string _FileName = Path.GetFileName(file.FileName);
+                    string _path = Path.Combine(Server.MapPath("~/Documento"), _FileName);
+                    file.SaveAs(_path);
                 }
+                ViewBag.Message = "Documento cargado correctamente!";
+                return View();
             }
-            return View(model);
+            catch
+            {
+                ViewBag.Message = "Falló carga de documento!";
+                return View();
+            }
         }
     }
 }

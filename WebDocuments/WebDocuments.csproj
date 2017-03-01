@@ -203,6 +203,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
     <Compile Include="Controllers\SolicitudController.cs" />
+    <Compile Include="Controllers\SolicitudController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -217,6 +218,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PerfilDocumentoModel.cs" />
     <Compile Include="Models\PerfilModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\PerfilUsuarioModel.cs" />
     <Compile Include="Models\PropietarioModel.cs" />
     <Compile Include="Models\RolModel.cs" />
@@ -452,6 +454,8 @@
     <Content Include="Views\Test\Index.cshtml" />
     <Content Include="Views\Test\Index2.cshtml" />
     <Content Include="Views\Solicitud\Index.cshtml" />
+    <Content Include="Views\Account\RegistroDocumento.cshtml" />
+    <Content Include="Views\Account\LoginUsuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

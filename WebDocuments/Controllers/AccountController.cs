@@ -423,6 +423,31 @@ namespace WebDocuments.Controllers
             base.Dispose(disposing);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(UserModel u)
+        {
+            if (ModelState.IsValid)
+            {
+                Session["Username"] = u.cod_usuario;
+                return RedirectToAction("RegistroDocumento");
+            }
+            return View(u);
+        }
+
+        public ActionResult RegistroDocumento()
+        {
+            if (Session["Username"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+
+        }
+
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
